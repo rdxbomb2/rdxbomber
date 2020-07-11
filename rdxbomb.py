@@ -46,9 +46,9 @@ def myupchar(num):
         time.sleep(2)
         browser.find_element_by_id("send-otp").click()
         time.sleep(2)
-        return "myupchar send"
+        print("myupchar send")
     except:
-        return "myupchar failed"
+        print("myupchar failed")
 
 
 def pizzahut(num):
@@ -59,7 +59,7 @@ def pizzahut(num):
         time.sleep(2)
         browser.find_element_by_xpath("//*[@id='app']/div/div[2]/div/form/button").click()
         time.sleep(2)
-        return "pizzahut send"
+        print("pizzahut send")
     except:
         print("pizzahut failed")
 
@@ -73,7 +73,7 @@ def unacademy(num):
         time.sleep(2)
         browser.find_element_by_xpath('//*[@id="DrawerPaper"]/div[2]/div[1]/div[3]/button').click()
         time.sleep(2)
-        return "unacademy send"
+        print("unacademy send")
     except:
         print("unacademy failed")
 
@@ -92,7 +92,7 @@ def dominos(num):
         browser.find_element_by_xpath(
             '//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/div/div/div/div[2]/div/form/div[2]/input').click()
         time.sleep(2)
-        return "dominos send"
+        print("dominos send")
     except:
         print("dominos failed")
 
@@ -111,7 +111,7 @@ def medlife(num):
 
         browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[3]/button').click()
         time.sleep(2)
-        return "medlife ok"
+        print("medlife ok")
     except:
         print("medlife failed")
 
@@ -138,7 +138,7 @@ def lybrate(num):
         browser.find_element_by_xpath(
             '/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/section/button').click()
         time.sleep(2)
-        return "lybrate ok"
+        print("lybrate ok")
     except:
         print("lybrate failed")
 
@@ -156,7 +156,7 @@ def netmeds(num):
 
         browser.find_element_by_xpath(
             '//*[@id="app"]/main/app-login/div[1]/div/div[1]/div[2]/div/div[1]/form/div[2]/button[2]').click()
-        return "netmeds ok"
+        print("netmeds ok")
     except:
         print("netmeds failed")
 
@@ -177,7 +177,7 @@ def swigy(num):
         browser.find_element_by_xpath(
             '//*[@id="overlay-sidebar-root"]/div/div/div[2]/div/div/div/div[2]/form/div[3]/a').click()
         time.sleep(2)
-        return "swigy ok"
+        print("swigy ok")
     except:
         print("swigy failed")
 
@@ -196,7 +196,7 @@ def housing(num):
         browser.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/div[2]/form/button').click()
         time.sleep(2)
 
-        return "housing ok"
+        print("housing ok")
     except:
         print("housing failed")
 
@@ -215,7 +215,7 @@ def dunzo(num):
         browser.find_element_by_xpath('//*[@id="modal"]/div/div[2]/div/div/div/div/div/div/div[2]/button').click()
         time.sleep(2)
 
-        return "dunzo ok"
+        print("dunzo ok")
     except:
         print("dunzo failed")
 
@@ -235,7 +235,7 @@ def justdial(num):
         browser.find_element_by_xpath('//*[@id="lgn_smtn"]').click()
         time.sleep(2)
 
-        return "justdial ok"
+        print("justdial ok")
     except:
         print("justdial failed")
 
@@ -258,7 +258,7 @@ def housejoy(num):
         browser.find_element_by_xpath('//*[@id="loginModal"]/div/div/div[2]/div/div[2]/div[1]/div').click()
         time.sleep(2)
 
-        return "homejoy ok"
+        print("homejoy ok")
     except:
         print("homejoy failed")
 
@@ -273,7 +273,7 @@ def filpkart(num):
 
         browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div/div[2]/div/form/div[4]/button').click()
         time.sleep(2)
-        return "filipkart ok"
+        print("filipkart ok")
     except:
         print("filipkart send")
 
