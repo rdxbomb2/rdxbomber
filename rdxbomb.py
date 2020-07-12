@@ -386,7 +386,7 @@ funclist = [swigy,myupchar,pizzahut,dominos,unacademy,medlife,lybrate,netmeds,ho
 
 
 def bomb():
-    for i in range(20):
+    for i in range(5):
         sf = random.choice(funclist)
         sf("7668165683")
 
