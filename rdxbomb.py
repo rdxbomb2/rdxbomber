@@ -6,7 +6,7 @@ import  random
 import os
 import multiprocessing
 
--------------------------     USING ARGUMENTS     ----------------------
+# -------------------------     USING ARGUMENTS     ----------------------
 import argparse
 my_parser = argparse.ArgumentParser(description='give the mobile number and the sms number')
 my_parser.add_argument('mn', metavar='mn',type=str, help='Mobile Number')
