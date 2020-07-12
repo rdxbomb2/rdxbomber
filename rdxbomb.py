@@ -392,9 +392,15 @@ def bomb():
 
 
 
-if __name__ == "__main__":
-    t1 = multiprocessing.Process(target=bomb)
-    t2 = multiprocessing.Process(target=bomb)
+t1 = multiprocessing.Process(target=bomb)
+t2 = multiprocessing.Process(target=bomb)
+t1.start()
+time.sleep(1)
+t2.start()
+
+# if __name__ == "__main__":
+    # t1 = multiprocessing.Process(target=bomb)
+    # t2 = multiprocessing.Process(target=bomb)
     # t3 = multiprocessing.Process(target=bomb)
     # t4 = multiprocessing.Process(target=bomb)
     # t5 = multiprocessing.Process(target=bomb)
@@ -402,9 +408,9 @@ if __name__ == "__main__":
     # t7 = multiprocessing.Process(target=bomb)
     # t8 = multiprocessing.Process(target=bomb)
 
-    t1.start()
-    time.sleep(1)
-    t2.start()
+    # t1.start()
+    # time.sleep(1)
+    # t2.start()
     # t3.start()
     # t4.start()
     # t5.start()
