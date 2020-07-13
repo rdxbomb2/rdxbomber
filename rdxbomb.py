@@ -379,7 +379,7 @@ funclist = [swigy,myupchar,pizzahut,dominos,unacademy,medlife,lybrate,netmeds,ho
 
 
 
-for i in range(int(fq)+5):
+for i in range(int(fq)+1):
     sf = random.choice(funclist)
     sf(mn)
 
